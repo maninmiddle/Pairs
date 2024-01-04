@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Pairs</string>
+    <string name="beautiful_logo">beautiful logo</string>
+    <string name="stringPlay">play</string>
+    <string name="stringAttention">! less time, more reward</string>
+    <string name="stringRules">Keep matching up two of the same\nobject until there are no more to be\npaired and you clear the board.</string>
+    <string name="stringMode">fast</string>
+    <string name="stringTimeFormat">%02d:%02d</string>
+    <string name="stringCongratulation">[CONGRATULATION]</string>
+    <string name="stringComment">[Great! You won]</string>
+    <string name="stringDoubleReward">Double Reward</string>
+    <string name="stringGoHome">go home</string>
+</resources>

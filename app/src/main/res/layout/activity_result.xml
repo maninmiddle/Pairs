@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.result.ResultActivity">
+
+
+    <ImageView
+        android:id="@+id/ivCup"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_cup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCongratulation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/stringCongratulation"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/ivCup"
+        app:layout_constraintStart_toStartOf="@id/ivCup"
+        app:layout_constraintTop_toBottomOf="@id/ivCup" />
+
+    <TextView
+        android:id="@+id/tvComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stringComment"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/tvCongratulation"
+        app:layout_constraintStart_toStartOf="@id/tvCongratulation"
+        app:layout_constraintTop_toBottomOf="@id/tvCongratulation" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvReward"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@id/tvCongratulation"
+        app:layout_constraintStart_toStartOf="@id/tvCongratulation"
+        app:layout_constraintTop_toBottomOf="@id/tvComment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivCoin"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_coin"
+                app:layout_constraintBottom_toBottomOf="@id/reward"
+                app:layout_constraintEnd_toStartOf="@id/reward"
+                app:layout_constraintTop_toTopOf="@id/reward" />
+
+            <TextView
+                android:id="@+id/reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:textSize="23sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="100" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDoubleReward"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/stringDoubleReward"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvCongratulation"
+        app:layout_constraintTop_toBottomOf="@id/cvReward" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHome"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        app:backgroundTint="@color/grey"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_home"
+        app:iconGravity="textTop"
+        app:iconSize="40dp"
+        android:contentDescription="@string/stringGoHome"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/btnDoubleReward"
+        app:layout_constraintEnd_toEndOf="@id/cvReward"
+        app:layout_constraintStart_toEndOf="@id/btnDoubleReward"
+        app:layout_constraintTop_toTopOf="@id/btnDoubleReward" />
+</androidx.constraintlayout.widget.ConstraintLayout>
